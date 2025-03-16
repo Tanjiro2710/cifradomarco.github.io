@@ -1,0 +1,95 @@
+/* Fondo y estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('257-2576323_love.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(2, 1, 1);
+    text-align: center;
+    margin: 0;
+    height: 100vh; /* Asegura que la página ocupe toda la altura de la pantalla */
+    display: center;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Estilo para el contenedor del video */
+.video-container {
+    width: 50%; /* Ajusta el tamaño del recuadro, puedes ponerlo como prefieras */
+    max-width: 300px; /* Tamaño máximo para el video */
+    margin-bottom: 10px; /* Espacio debajo del video */
+    border: 10px solid #fff; /* Borde blanco alrededor del video */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave para darle profundidad */
+    overflow: hidden; /* Evita que el contenido se desborde del recuadro */
+}
+
+/* Estilo para el video dentro del recuadro */
+video {
+    width: 30%; /* El video ocupa todo el ancho del recuadro */
+    height: auto; /* La altura se ajusta proporcionalmente */
+    object-fit: cover; /* Asegura que el video cubra todo el recuadro sin deformarse */
+}
+
+/* Estilo del contenedor del contenido principal */
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    animation: slideIn 1.5s ease-out;
+    z-index: 1; /* Asegura que el contenido esté por encima del video */
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #af4c4c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    animation: bounce 1s infinite;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animación de deslizamiento para el contenedor */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animación de rebote para el enlace */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
